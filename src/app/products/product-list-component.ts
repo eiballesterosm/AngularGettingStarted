@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { IProduct } from "./IProduct";
 
 @Component({
     selector: 'pm-products',
@@ -12,7 +13,7 @@ export class ProductListComponent {
     showImage: boolean = false;
     listFilter: string = 'cart';
 
-    products: any[] = [
+    products: IProduct[] = [
         {
             "productId": 1,
             "productName": "Garden Cart",
@@ -20,7 +21,7 @@ export class ProductListComponent {
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 32.99,
-            "startingRating": 4.2,
+            "starRating": 4.2,
             "imageUrl": "assets/images/leaf_rake.png"
         },
         {
@@ -30,7 +31,7 @@ export class ProductListComponent {
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 178.799,
-            "startingRating": 4.2,
+            "starRating": 4.2,
             "imageUrl": "assets/images/garden_cart.png"
         },
         {
@@ -40,7 +41,7 @@ export class ProductListComponent {
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 2.869,
-            "startingRating": 4.2,
+            "starRating": 4.2,
             "imageUrl": "assets/images/hammer.png"
         },
     ];
