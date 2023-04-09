@@ -29,7 +29,7 @@ export class ProductListComponent {
             "productCode": "CODE 0002",
             "releaseDate": "20220101",
             "description": 'Product description',
-            "price": 32.99,
+            "price": 178.799,
             "startingRating": 4.2,
             "imageUrl": "assets/images/garden_cart.png"
         },
@@ -39,7 +39,7 @@ export class ProductListComponent {
             "productCode": "CODE 0003",
             "releaseDate": "20220101",
             "description": 'Product description',
-            "price": 32.99,
+            "price": 2.869,
             "startingRating": 4.2,
             "imageUrl": "assets/images/hammer.png"
         },
