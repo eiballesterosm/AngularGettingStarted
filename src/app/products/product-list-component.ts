@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
         {
             "productId": 1,
             "productName": "Garden Cart",
-            "productCode": "CODE 0001",
+            "productCode": "CODE-0001",
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 32.99,
@@ -32,7 +32,7 @@ export class ProductListComponent implements OnInit {
         {
             "productId": 2,
             "productName": "Product 2",
-            "productCode": "CODE 0002",
+            "productCode": "CODE-0002",
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 178.799,
@@ -42,7 +42,7 @@ export class ProductListComponent implements OnInit {
         {
             "productId": 3,
             "productName": "Product 3",
-            "productCode": "CODE 0003",
+            "productCode": "CODE-0003",
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 2.869,
