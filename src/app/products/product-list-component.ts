@@ -10,13 +10,23 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit(): void {
         console.log('ngOnInit');
+        //Default listFilter value
+        this.listFilter = 'cart';
     }
 
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 4;
     showImage: boolean = false;
-    listFilter: string = 'cart';
+    
+    private _listFilter: string = '';
+    get listFilter(): string {
+        return this._listFilter;
+    }
+    set listFilter(value: string) {
+        this._listFilter = value;
+        console.log('In setter: ', value);
+    }
 
     products: IProduct[] = [
         {
@@ -52,7 +62,7 @@ export class ProductListComponent implements OnInit {
     ];
 
     public toogleImage(): void {
-        this.showImage = !this.showImage;
+        this.showImage = !this.showImage;        
     }
 
 }
