@@ -4,7 +4,7 @@ import { IProduct } from "./IProduct";
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html',
-    styleUrls:['./product-list.component.css']
+    styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
     imageWidth: number = 50;
     imageMargin: number = 4;
     showImage: boolean = false;
-    
+
     private _listFilter: string = '';
     get listFilter(): string {
         return this._listFilter;
@@ -26,7 +26,10 @@ export class ProductListComponent implements OnInit {
     set listFilter(value: string) {
         this._listFilter = value;
         console.log('In setter: ', value);
+        this.filteredProducts = this.performFilter(value);
     }
+
+    filteredProducts: IProduct[] = [];
 
     products: IProduct[] = [
         {
@@ -62,7 +65,12 @@ export class ProductListComponent implements OnInit {
     ];
 
     public toogleImage(): void {
-        this.showImage = !this.showImage;        
+        this.showImage = !this.showImage;
     }
 
+    public performFilter(filterBy: string): IProduct[] {
+        filterBy = filterBy.toLocaleLowerCase();
+        return this.products.filter((product: IProduct) =>
+            product.productName.toLocaleLowerCase().includes(filterBy));
+    }
 }
