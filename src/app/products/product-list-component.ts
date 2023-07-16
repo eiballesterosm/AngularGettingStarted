@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 32.99,
-            "starRating": 4.2,
+            "starRating": 1.2,
             "imageUrl": "assets/images/leaf_rake.png"
         },
         {
@@ -59,7 +59,7 @@ export class ProductListComponent implements OnInit {
             "releaseDate": "20220101",
             "description": 'Product description',
             "price": 2.869,
-            "starRating": 4.2,
+            "starRating": 3.2,
             "imageUrl": "assets/images/hammer.png"
         },
     ];
@@ -72,5 +72,9 @@ export class ProductListComponent implements OnInit {
         filterBy = filterBy.toLocaleLowerCase();
         return this.products.filter((product: IProduct) =>
             product.productName.toLocaleLowerCase().includes(filterBy));
+    }
+
+    public onRatingClicked(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
     }
 }
