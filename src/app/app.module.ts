@@ -29,7 +29,7 @@ import { RouterModule } from '@angular/router';
       { path: 'products/:id', component: ProductDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }s
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ])
   ],
   bootstrap: [AppComponent]
